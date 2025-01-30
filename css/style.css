@@ -11,8 +11,8 @@
 
 *{
     background-color: grey;
-    margin:1rem;
-    padding:0rem;
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@ header h1{
     font-family: Splatoon1;
     color: rgb(255, 255, 255);
     font-size: 80px;
-    padding: 1 rem
+    padding: 0;
 }
 
 header h2{
@@ -35,5 +35,4 @@ header h2{
 div p{
     display: flex;
     justify-content: center;
-    margin: 10%;
 }
