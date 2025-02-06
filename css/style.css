@@ -8,6 +8,9 @@
     src: url(../fonts/Splatoon2.otf);
 }
 
+html {
+    cursor: url(media\img\cursor_img.png), auto;  /* Cambia 'ruta/a/tu/sprite.png' por la ruta de tu imagen */
+}
 
 *{
     background-color: grey;
