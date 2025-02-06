@@ -9,17 +9,20 @@
 }
 
 html {
-    cursor: url(media\img\cursor_img.png), auto;  /* Cambia 'ruta/a/tu/sprite.png' por la ruta de tu imagen */
+    cursor: url(media\img\cursor_img.png), auto;
 }
 
-*{
-    background-color: grey;
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-header h1{
+body {
+    background-color: grey; /* Mantiene el fondo solo en el body */
+}
+
+header h1 {
     display: flex;
     justify-content: center;
     font-family: Splatoon1;
@@ -28,16 +31,75 @@ header h1{
     padding: 0;
 }
 
-header h2{
+header h2 {
     display: flex;
     justify-content: center;
     color: rgb(246, 255, 0);
     font-family: Splatoon2;
     font-size: 40px;
-    
 }
 
-div p{
+div p {
     display: flex;
     justify-content: center;
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Asegura que el texto esté por encima de las imágenes */
+    font-size: 24px;
+    font-family: Splatoon2;
+    color: white;
+    font-weight: bold;
+    pointer-events: none; /* Evita que el texto interfiera con los eventos del botón */
+    transition: color 0.3s ease-in-out; /* Agrega una transición para el efecto hover */
+}
+
+.button {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: transparent; /* Asegura que el botón no tenga fondo */
+}
+
+.front-image,
+.back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent !important; 
+}
+
+/* Imagen de atrás */
+.back-image {
+    z-index: 1; 
+    transform-origin: center;
+}
+
+/* Imagen de delante */
+.front-image {
+    z-index: 2;
+}
+
+.button:hover .front-image {
+    transform: rotate(-5deg);
+}
+
+.button:hover .back-image {
+    transform: rotate(5deg);
 }
