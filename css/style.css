@@ -9,7 +9,10 @@
 }
 
 html {
-    cursor: url(media\img\cursor_img.png), auto;
+    cursor: url(../media/Splatoon_Squid_Cursor_Click.gif), auto;
+
+    /* CAMBIAR POR UNA IMAGEN EN OTRO COLOR Y CAMBIAR SU RUTA */
+    /* cursor: url(../media/img/Splatoon_Squid_Cursor.png)pointer; */
 }
 
 * {
@@ -20,6 +23,21 @@ html {
 
 body {
     background-color: grey; /* Mantiene el fondo solo en el body */
+    display: flex;
+    flex-direction: column;
+}
+
+#menu .menu-flex{
+    background-color: #272727;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-flex{
+    list-style-type: none;  
+    padding: 0;  
+    margin: 0
 }
 
 header h1 {
@@ -47,6 +65,7 @@ div p {
 /* Estilos para el contenedor del botón */
 .button-container {
     position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,8 +87,8 @@ div p {
 
 .button {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     cursor: pointer;
     background-color: transparent; /* Asegura que el botón no tenga fondo */
 }
@@ -103,3 +122,13 @@ div p {
 .button:hover .back-image {
     transform: rotate(5deg);
 }
+
+
+footer{
+    display: block;
+    background-color: #272727;
+    padding: 0%;
+    margin: 0%;
+    border: 0%;
+}
+
