@@ -19,12 +19,26 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+
+}
+
+p{
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      
 }
 
 body {
     background-color: grey; /* Mantiene el fondo solo en el body */
     display: flex;
     flex-direction: column;
+}
+.menu-flex{
+    list-style-type: none;  
+    padding: 0;  
+    margin: 0
 }
 
 #menu .menu-flex{
@@ -34,11 +48,17 @@ body {
     justify-content: space-around;
 }
 
-.menu-flex{
-    list-style-type: none;  
-    padding: 0;  
-    margin: 0
-}
+
+a { /*Textos del menu*/
+    font-family: Splatoon1;
+    color: #ffffff; 
+  }
+  
+  /* Cambiar el color cuando el usuario pasa el ratón sobre el enlace */
+ a:hover {
+    color: rgb(132, 0, 255);
+  }
+  
 
 header h1 {
     display: flex;
@@ -65,7 +85,6 @@ div p {
 /* Estilos para el contenedor del botón */
 .button-container {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
