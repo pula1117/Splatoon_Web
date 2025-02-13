@@ -223,7 +223,6 @@ footer a {
     color: rgb(255, 255, 255);
     font-family: Splatoon2;
     font-size: 30px;
-
     transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
 
 }
@@ -234,6 +233,26 @@ footer a {
     transform: rotate(-5deg);
     
 }
+
+.weapons .card img {
+    width: 100%;  /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro sin deformarse */
+    border-radius: 10px; /* Opcional: redondear bordes */
+    transition: transform 0.3s ease; 
+}
+
+
+
+#divider{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
 
 
 .maps{
@@ -266,15 +285,15 @@ footer a {
 .maps h2 {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: rgb(255, 255, 255);
     font-family: Splatoon2;
     font-size: 30px;
-
     transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
 
 }
 
-.mpas h2:hover{
+.maps h2:hover{
     color: rgb(246, 255, 0);
     font-size: 40px;
     transform: rotate(-5deg);
@@ -286,6 +305,7 @@ footer a {
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: contain; /* Asegura que la imagen se ajuste dentro sin deformarse */
     border-radius: 10px; /* Opcional: redondear bordes */
+    transition: transform 0.3s ease; 
 }
 
 
@@ -295,4 +315,5 @@ footer a {
     background-color: rgb(255, 0, 234) !important; /* Fuerza el color de fondo */
     border-color: rgb(255, 255, 255) !important; /* Fuerza el color del borde */
     transform: scale(1.1);
+    transition: background-color 0.5s ease, transform 0.3s ease;
 }

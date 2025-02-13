@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector("body");
 
     function handleSelection(cards, event) {
-        event.stopPropagation(); // Evita que el clic se propague al body
+        
+         // Evita que el clic se propague al body
+        event.stopPropagation();
 
         // Deseleccionar todas las tarjetas dentro del grupo (weapons o maps)
         cards.forEach(c => c.classList.remove("selected"));
@@ -38,4 +40,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+$(document).ready(function () {
+    const weaponCards = $(".weapons .card");
+    const mapCards = $(".maps .card");
+    const body = $("body");
+
+    function handleSelection($cards, event) {
+        event.stopPropagation(); // Evita que el clic se propague al body
+
+        // Remover selección previa en el grupo correspondiente
+        $cards.removeClass("selected");
+
+        // Agregar la clase 'selected' al elemento clicado
+        $(event.currentTarget).addClass("selected");
+
+        // Obtener y mostrar el nombre en consola
+        const selectedName = $(event.currentTarget).find(".name").text();
+        console.log(`Seleccionado: ${selectedName}`);
+    }
+
+    // Evento para seleccionar armas
+    weaponCards.on("click", function (event) {
+        handleSelection(weaponCards, event);
+    });
+
+    // Evento para seleccionar mapas
+    mapCards.on("click", function (event) {
+        handleSelection(mapCards, event);
+    });
+
+    // Evento para deseleccionar todo al hacer clic fuera
+    body.on("click", function () {
+        weaponCards.removeClass("selected");
+        mapCards.removeClass("selected");
+        console.log("Ningún arma ni mapa seleccionado");
+    });
+});
 
