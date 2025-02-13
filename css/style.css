@@ -56,11 +56,11 @@ a { /*Textos del menu*/
   
   /* Cambiar el color cuando el usuario pasa el ratón sobre el enlace */
  a:hover {
-    color: rgb(132, 0, 255);
+    color: rgb(246, 255, 0);
   }
   
 
-header h1 {
+h1 {
     display: flex;
     justify-content: center;
     font-family: Splatoon1;
@@ -69,7 +69,7 @@ header h1 {
     padding: 0;
 }
 
-header h2 {
+h2 {
     display: flex;
     justify-content: center;
     color: rgb(246, 255, 0);
@@ -150,4 +150,66 @@ footer{
     margin: 0%;
     border: 0%;
 }
+
+
+/* SELECTOR DE ARMAS */
+/* .btns-cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+.btns-cont button{
+    background-color: chocolate;
+    color: aliceblue;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+.weapons{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
+
+}
+
+.weapons :hover{
+    transform: scale(1.1);
+}
+
+.weapons .card {
+    background-color: rgb(132, 0, 255);
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+}
+
+.weapons h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Splatoon2;
+    font-size: 30px;
+
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
+
+}
+
+.weapons h2:hover{
+    color: rgb(246, 255, 0);
+    font-size: 40px;
+    transform: rotate(-5deg);
+    
+}
+
 
