@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector("body");
 
     function handleSelection(cards, event) {
-        
          // Evita que el clic se propague al body
         event.stopPropagation();
 

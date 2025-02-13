@@ -9,7 +9,7 @@
 }
 
 html {
-    cursor: url(../media/Splatoon_Squid_Cursor_Click.gif), auto;
+    cursor: url(../media/img/Splatoon_Squid_Cursor.png), auto;
 
     /* CAMBIAR POR UNA IMAGEN EN OTRO COLOR Y CAMBIAR SU RUTA */
     /* cursor: url(../media/img/Splatoon_Squid_Cursor.png)pointer; */
@@ -118,11 +118,14 @@ div p {
     transition: color 0.3s ease-in-out; /* Agrega una transición para el efecto hover */
 }
 
+.button-text p a {
+    cursor: pointer;
+}
+
 .button {
     position: relative;
     width: 400px;
     height: 400px;
-    cursor: pointer;
     background-color: transparent; /* Asegura que el botón no tenga fondo */
 }
 
