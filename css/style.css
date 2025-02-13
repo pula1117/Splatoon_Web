@@ -77,9 +77,23 @@ h2 {
     font-size: 40px;
 }
 
+h3{
+    display:flex;
+    justify-content: center;
+    font-family: Splatoon2;
+    font-size: 30px;
+    color: rgb(246, 255, 0);
+}
+
+#game-text{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 div p {
     display: flex;
     justify-content: center;
+    
 }
 
 /* Estilos para el contenedor del botón */
@@ -146,11 +160,19 @@ div p {
 footer{
     display: block;
     background-color: #272727;
-    padding: 0%;
+    padding: 2rem;
     margin: 0%;
     border: 0%;
 }
 
+footer a {
+    padding-left:1rem;
+    padding-right:1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    
+}
 
 /* SELECTOR DE ARMAS */
 /* .btns-cont{
@@ -175,7 +197,7 @@ footer{
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
+    padding-bottom: 5rem;;
 
 }
 
@@ -192,6 +214,7 @@ footer{
     width: 300px;
     text-align: center;
     box-shadow: 8px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
 }
 
 .weapons h2 {
@@ -213,3 +236,11 @@ footer{
 }
 
 
+
+/* -------------------- */
+
+.selected {
+    background-color: rgb(255, 100, 100) !important; /* Fuerza el color de fondo */
+    border-color: yellow !important; /* Fuerza el color del borde */
+    transform: scale(1.1);
+}
