@@ -236,11 +236,63 @@ footer a {
 }
 
 
+.maps{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 5rem;;
+
+}
+
+.maps :hover{
+    transform: scale(1.1);
+}
+
+.maps .card {
+    background-color: rgb(132, 0, 255);
+    border: 10px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 8px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
+}
+
+.maps h2 {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Splatoon2;
+    font-size: 30px;
+
+    transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease; 
+
+}
+
+.mpas h2:hover{
+    color: rgb(246, 255, 0);
+    font-size: 40px;
+    transform: rotate(-5deg);
+    
+}
+
+.maps .card img {
+    width: 100%;  /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro sin deformarse */
+    border-radius: 10px; /* Opcional: redondear bordes */
+}
+
 
 /* -------------------- */
 
 .selected {
-    background-color: rgb(255, 100, 100) !important; /* Fuerza el color de fondo */
-    border-color: yellow !important; /* Fuerza el color del borde */
+    background-color: rgb(255, 0, 234) !important; /* Fuerza el color de fondo */
+    border-color: rgb(255, 255, 255) !important; /* Fuerza el color del borde */
     transform: scale(1.1);
 }
