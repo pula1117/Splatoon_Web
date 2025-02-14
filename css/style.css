@@ -32,10 +32,14 @@ p{
 }
 
 body {
-    background-color: grey; /* Mantiene el fondo solo en el body */
+    background: url('../media/img/GeneralWeb/Background_image.PNG') no-repeat center center fixed;
+    background-size: cover;
+    background-color: grey; /* Color de respaldo si la imagen no carga */
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
 }
+
 .menu-flex{
     list-style-type: none;  
     padding: 0;  
