@@ -28,7 +28,8 @@ html {
 p{
     color: aliceblue;
     font-family:Splatoon2;
-      
+      text-align: justify;
+      font-size: 1.5rem;
 }
 
 body {
@@ -40,44 +41,6 @@ body {
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
 }
 
-
-
-
-/* MENU BARRA */
-.menu-flex {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-}
-
-#menu .menu-flex {
-    background-color: #272727;
-    padding: 2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-/* Botón de apertura y cierre */
-#btnOpenMenu, #btnCloseMenu {
-    display: none;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
-
-a { /*Textos del menu*/
-    font-family: Splatoon1;
-    color: #ffffff; 
-  }
-  
- a:hover {
-    color: rgb(246, 255, 0);
-  }
-  
-/* FIN MENU BARRA*/
 
 
 h1 {
@@ -690,18 +653,42 @@ footer a {
 
 /* FIN COLOR SLIDER */
 
-/* -------------------- */
+
+/* MENU BARRA */
+.menu-flex {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+#menu .menu-flex {
+    background-color: #272727;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
 
 
+/* Botón de apertura y cierre */
+#btnOpenMenu, #btnCloseMenu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
 
 
-
-
-
-
-
-
-
+a { /*Textos del menu*/
+    font-family: Splatoon1;
+    color: #ffffff; 
+  }
+  
+ a:hover {
+    color: rgb(246, 255, 0);
+  }
+  
+/* FIN MENU BARRA*/
 
 
 
@@ -709,6 +696,12 @@ footer a {
 /* MEDIA QUERYS PARA RESPONSIVE */
 
 @media (max-width: 768px) {
+
+    p{
+        font-size: 1rem;
+    }
+
+    
     .title-container {
         height: 250px; 
         padding-top: 400px;
@@ -735,7 +728,7 @@ footer a {
     }
 
     .menu-flex {
-        display: none; /* Oculto por defecto */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -756,6 +749,15 @@ footer a {
         right: 10px;
         z-index: 20;
     }
+
+    #menu.active .menu-flex {
+        display: flex;
+    }
+    
+    #menu.active #btnCloseMenu {
+        display: block;
+    }
+    
 
 /* FORMULARIO */
 .beta-signup {
