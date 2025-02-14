@@ -103,7 +103,7 @@ h3{
     display:flex;
     justify-content: center;
     font-family: Splatoon2;
-    font-size: 30px;
+    font-size: 2em;
     color: rgb(246, 255, 0);
 }
 
@@ -293,11 +293,120 @@ div p {
 
 /* FIN IMAGEN BOTON */
 
+/* FORM */
+
+.beta-signup {
+    width: 50%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(39, 39, 39, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-family: Splatoon2;
+}
+
+.beta-signup h2 {
+    color: yellow;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.beta-signup label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.beta-signup input, .beta-signup select, .beta-signup textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.beta-signup .registerButton {
+    background-color: yellow;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.beta-signup button:hover {
+    transform: scale(1.1);
+}
+
+.beta-signup form textarea{
+    font-family: Splatoon2;
+}
+
+.beta-signup form input{
+    font-family: Splatoon2;
+}
+
+.beta-signup form select option{
+    font-family: Splatoon2;
+    color:black;
+}
 
 
 
 
 
+.beta-signup form .registerButton{
+    font-family: Splatoon2;
+}
+
+.beta-signup select, .beta-signup textarea {
+    color: black; 
+    background-color: white; 
+    font-family: Splatoon2;
+}
+
+.beta-signup select option {
+    color: black; 
+    background-color: white;
+}
+
+.beta-signup div {
+    background-color: yellow;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.beta-signup p{
+    color: black;
+}
+
+.registerButton {
+   display: flex;
+    
+}
+
+.hidden {
+    display: none;
+}
+
+#checkImage {
+    width: 50px; /* Ajusta el tamaño del check */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* FIN FORM */
 
 /* FOOTER */
 
@@ -368,7 +477,7 @@ footer a {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 0px;
     transition: transform 0.2s;
 }
 
@@ -540,6 +649,7 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px auto;
 }
 
 /* Barra de colores */
@@ -570,6 +680,10 @@ footer a {
     border: 7px solid rgb(0, 0, 0);
     border-radius: 30px;
     margin-top: 10px;
+}
+
+.color-slider-text{
+    padding:3rem;
 }
 
 

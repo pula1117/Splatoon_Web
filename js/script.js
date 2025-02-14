@@ -122,8 +122,15 @@ $(document).ready(function () {
     });
 });
 
+//BOTON REGISTRO
+document.addEventListener("DOMContentLoaded", function () {
+    const registerButton = document.getElementById("registerButton");
+    const checkImage = document.getElementById("checkImage");
 
-
+    registerButton.addEventListener("click", function () {
+        checkImage.classList.toggle("hidden"); // Alterna la visibilidad
+    });
+});
 
 
 
