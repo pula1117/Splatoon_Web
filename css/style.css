@@ -112,17 +112,23 @@ h3{
   
     position: relative; 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 1%;
 }
 
-/* .title-containe img{
+.title-container img{
     z-index: -1;
-    width: auto; 
+    width: 10%; 
     height: auto;
-} */
+}
+
+.title-container:hover .splat{
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
+
 
 /* FIN TITULO */
 
@@ -230,16 +236,9 @@ div p {
 
 /* Contenedor del botón, oculto por defecto */
 #fightButton {
-    
     display: none; /* No se muestra hasta que selecciones arma y mapa */
-    
     display: flex;
     
-
-  
-   
-
- 
 }
 
 /* FIN BOTON  */
