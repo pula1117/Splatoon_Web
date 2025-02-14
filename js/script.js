@@ -118,3 +118,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+
+$(document).ready(function () {
+    let progress = 0;
+    let totalBalls = 10;
+    let ballValue = 10;
+
+    // Generar 10 bolas dinámicamente
+    for (let i = 0; i < totalBalls; i++) {
+        $(".ball-container").append(`<div class='ball' data-value='${ballValue}'>${ballValue}</div>`);
+    }
+
+    $(".ball").click(function () {
+        progress += ballValue; // Sumar 10 al progreso
+        $(this).fadeOut(300, function () { $(this).remove(); }); // Desaparecer y eliminar bola
+        
+        // Actualizar barra de progreso
+        $("#progressBar").css("width", progress + "%");
+    });
+});
