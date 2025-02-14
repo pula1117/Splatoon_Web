@@ -127,3 +127,61 @@ $(document).ready(function () {
         btnOpenMenu.style.display = 'block';
         btnCloseMenu.style.display = 'none';
     });
+
+
+
+
+// COLOR SLIDER
+const sliderContainer = document.querySelector('.color-slider-container');
+const thumb = document.getElementById('colorThumb');
+const colorPreview = document.getElementById('colorPreview');
+
+sliderContainer.addEventListener('click', function (e) {
+    moveThumb(e.pageX);
+});
+
+sliderContainer.addEventListener('mousemove', function (e) {
+    if (e.buttons === 1) { // Arrastrar con clic
+        moveThumb(e.pageX);
+    }
+});
+
+function moveThumb(x) {
+    const rect = sliderContainer.getBoundingClientRect();
+    let offsetX = x - rect.left;
+
+    // Limitar dentro del slider
+    if (offsetX < 0) offsetX = 0;
+    if (offsetX > rect.width) offsetX = rect.width;
+
+    thumb.style.left = offsetX + 'px';
+
+    const color = getColorAtPosition(offsetX / rect.width);
+    thumb.style.backgroundColor = color;
+    colorPreview.style.backgroundColor = color;
+}
+
+function getColorAtPosition(percent) {
+    const gradientColors = [
+        [255, 0, 0],   // Rojo
+        [255, 165, 0], // Naranja
+        [255, 255, 0], // Amarillo
+        [0, 128, 0],   // Verde
+        [0, 255, 255], // Cian
+        [0, 0, 255],   // Azul
+        [238, 130, 238] // Violeta
+    ];
+
+    const segment = percent * (gradientColors.length - 1);
+    const index = Math.floor(segment);
+    const ratio = segment - index;
+
+    const startColor = gradientColors[index];
+    const endColor = gradientColors[index + 1];
+
+    const r = Math.round(startColor[0] + (endColor[0] - startColor[0]) * ratio);
+    const g = Math.round(startColor[1] + (endColor[1] - startColor[1]) * ratio);
+    const b = Math.round(startColor[2] + (endColor[2] - startColor[2]) * ratio);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
