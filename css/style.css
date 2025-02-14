@@ -264,19 +264,12 @@ div p {
 /* FOOTER */
 
 footer{
-    /* display: block;
-    background-color: #272727;
-    padding: 2rem;
-    margin: 0%;
-    border: 0%; */
-
     background-color: #272727;
     padding: 2rem;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    padding-top: 200px;
 }
 
 footer div{
@@ -487,6 +480,8 @@ footer a {
     display: flex;
     justify-content: center; /* Centra el botón horizontalmente */
     margin-top: 2rem; /* Espacio entre la selección de mapas y el botón */
+    
+    padding-bottom: 5rem;
 }
 
 /* Botón de combate, mismo diseño que el de la página principal */
