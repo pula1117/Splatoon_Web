@@ -135,20 +135,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // MENU HAMBURGUESA
+    const menu = document.getElementById('menu');
     const btnOpenMenu = document.getElementById('btnOpenMenu');
     const btnCloseMenu = document.getElementById('btnCloseMenu');
-    const menuFlex = document.querySelector('.menu-flex');
 
     btnOpenMenu.addEventListener('click', () => {
-        menuFlex.classList.add('active');
-        btnOpenMenu.style.display = 'none';
-        btnCloseMenu.style.display = 'block';
+        menu.classList.add('active');
     });
 
     btnCloseMenu.addEventListener('click', () => {
-        menuFlex.classList.remove('active');
-        btnOpenMenu.style.display = 'block';
-        btnCloseMenu.style.display = 'none';
+        menu.classList.remove('active');
     });
 
 

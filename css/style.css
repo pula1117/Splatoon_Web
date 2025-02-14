@@ -68,8 +68,6 @@ body {
 }
 
 
-
-
 a { /*Textos del menu*/
     font-family: Splatoon1;
     color: #ffffff; 
@@ -567,6 +565,7 @@ footer a {
     margin: 0;
     display: flex;
     justify-content: space-around;
+    overflow:hidden ;
     
 }
 
@@ -758,6 +757,32 @@ footer a {
         z-index: 20;
     }
 
+/* FORMULARIO */
+.beta-signup {
+    width: 95%;
+    padding: 3rem;
+    margin: 1.5rem auto;
+}
+
+.beta-signup h2 {
+    font-size: 1.5rem;
+}
+
+.beta-signup label,
+.beta-signup input,
+.beta-signup select,
+.beta-signup textarea,
+.beta-signup .registerButton {
+    font-size: 0.9rem;
+}
+
+.beta-signup .registerButton {
+    padding: 0.6rem 1rem;
+}
+
+#checkImage {
+    width: 35px;
+}
 /* FOOTER */
     footer h3 {
         font-size: 25px;
