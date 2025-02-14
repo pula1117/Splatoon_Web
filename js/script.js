@@ -139,3 +139,25 @@ $(document).ready(function () {
         $("#progressBar").css("width", progress + "%");
     });
 });
+
+
+
+
+
+
+// MENU HAMBURGUESA
+    const btnOpenMenu = document.getElementById('btnOpenMenu');
+    const btnCloseMenu = document.getElementById('btnCloseMenu');
+    const menuFlex = document.querySelector('.menu-flex');
+
+    btnOpenMenu.addEventListener('click', () => {
+        menuFlex.classList.add('active');
+        btnOpenMenu.style.display = 'none';
+        btnCloseMenu.style.display = 'block';
+    });
+
+    btnCloseMenu.addEventListener('click', () => {
+        menuFlex.classList.remove('active');
+        btnOpenMenu.style.display = 'block';
+        btnCloseMenu.style.display = 'none';
+    });

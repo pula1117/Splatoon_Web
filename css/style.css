@@ -40,6 +40,8 @@ body {
     min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
 }
 
+
+/* MENU BARRA
 .menu-flex{
     list-style-type: none;  
     padding: 0;  
@@ -51,7 +53,34 @@ body {
     padding: 2rem;
     display: flex;
     justify-content: space-around;
+} */
+
+
+/* MENU BARRA */
+.menu-flex {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
 }
+
+#menu .menu-flex {
+    background-color: #272727;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* Botón de apertura y cierre */
+#btnOpenMenu, #btnCloseMenu {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
 
 
 a { /*Textos del menu*/
@@ -59,11 +88,12 @@ a { /*Textos del menu*/
     color: #ffffff; 
   }
   
-  /* Cambiar el color cuando el usuario pasa el ratón sobre el enlace */
  a:hover {
     color: rgb(246, 255, 0);
   }
   
+/* FIN MENU BARRA*/
+
 
 h1 {
     display: flex;
@@ -90,6 +120,25 @@ h3{
     color: rgb(246, 255, 0);
 }
 
+/* TITULO */
+.title-container{
+  
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+}
+
+/* .title-containe img{
+    z-index: -1;
+    width: auto; 
+    height: auto;
+} */
+
+/* FIN TITULO */
+
 #game-text{
     margin-left: 20%;
     margin-right: 20%;
@@ -102,7 +151,7 @@ h3{
 }
 
 #game-text p:hover {
-    transform:scale(1.2);
+    /* transform:scale(1.2); */
     font-family: Splatoon2;
 }
 
@@ -112,6 +161,9 @@ div p {
     
 }
 
+
+
+/* BOTON GO */
 /* Estilos para el contenedor del botón */
 .button-container {
     width: 100%;              
@@ -126,13 +178,13 @@ div p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3; /* Asegura que el texto esté por encima de las imágenes */
+    z-index: 3; 
     font-size: 24px;
     font-family: Splatoon2;
     color: white;
     font-weight: bold;
-    pointer-events: none; /* Evita que el texto interfiera con los eventos del botón */
-    transition: color 0.3s ease-in-out; /* Agrega una transición para el efecto hover */
+    pointer-events: none; 
+    transition: color 0.3s ease-in-out; 
 }
 
 .button:hover .button-text{
@@ -154,6 +206,9 @@ div p {
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
+/* FIN BOTON GO */
+
+
 
 .front-image,
 .back-image {
@@ -530,3 +585,61 @@ footer a {
 #fightButton:hover .back-image {
     transform: rotate(5deg);
 }
+
+
+
+
+
+/* MEDIA QUERYS PARA RESPONSIVE */
+
+@media (max-width: 768px) {
+    .title-container {
+        height: 250px; 
+        padding-top: 400px;
+    }
+
+    .title-container h1 {
+        font-size: 3rem;
+    }
+
+    .title-container h2 {
+        font-size: 1.5rem;
+        padding-bottom: 100px;
+    }
+
+
+/* MENU HAMBURGUESA */
+    #menu {
+        position: relative;
+        background-color: #272727;
+    }
+
+    #btnOpenMenu {
+        display: block;
+    }
+
+    .menu-flex {
+        display: none; /* Oculto por defecto */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #272727;
+        z-index: 10;
+    }
+
+    .menu-flex.active {
+        display: flex; /* Mostrar menú cuando tenga la clase 'active' */
+    }
+
+    #btnCloseMenu {
+        display: none; /* Lo activaremos con JS */
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 20;
+    }
+}
+
+
