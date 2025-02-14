@@ -74,16 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const weaponCards = document.querySelectorAll(".weapon-card");
     const mapCards = document.querySelectorAll(".map-card");
-    const fightButtonContainer = document.getElementById("fightButtonContainer");
     const fightButton = document.getElementById("fightButton");
 
-    if (!weaponCards.length || !mapCards.length || !fightButtonContainer || !fightButton) {
+    if (!weaponCards.length || !mapCards.length || !fightButton || !fightButton) {
         console.error("ERROR: No se encontraron elementos en el DOM.");
         return;
     }
 
     // Ocultar el botón y deshabilitar el enlace al cargar la página
-    fightButtonContainer.style.display = "none";
+    fightButton.style.display = "none";
     fightButton.classList.add("disabled");
     fightButton.style.pointerEvents = "none"; // Evita que se pueda hacer clic
 
@@ -92,11 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const selectedMap = document.querySelector(".map-card.selected");
 
         if (selectedWeapon && selectedMap) {
-            fightButtonContainer.style.display = "flex"; // Mostrar el botón
+            fightButton.style.display = "flex"; // Mostrar el botón
             fightButton.classList.remove("disabled");
             fightButton.style.pointerEvents = "auto"; // Habilitar clic
         } else {
-            fightButtonContainer.style.display = "none"; // Ocultar el botón
+            fightButton.style.display = "none"; // Ocultar el botón
             fightButton.classList.add("disabled");
             fightButton.style.pointerEvents = "none"; // Deshabilitar clic
         }

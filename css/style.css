@@ -175,8 +175,14 @@ div p {
 }
 
 
-/* BOTON GO */
-/* Estilos para el contenedor del botón */
+/* BOTON */
+
+.button {
+    position: relative;
+    width: 380px;
+    height: 200px;
+    background-color: transparent; /* Asegura que el botón no tenga fondo */
+}
 .button-container {
     width: 100%;              
     display: flex;
@@ -197,34 +203,49 @@ div p {
     color: white;
     font-weight: bold;
     pointer-events: none; 
-    transition: color 0.3s ease-in-out; 
-}
-
-.button:hover .button-text{
-    color: rgb(246, 255, 0) !important;
-}
-
-.button-text p a {
-    cursor: pointer;
-}
-
-.button {
-    position: relative;
-    width: 380px;
-    height: 200px;
-    background-color: transparent; /* Asegura que el botón no tenga fondo */
+    transition: color 0.3s ease-in-out;
+    text-align: center;
+    font-size: 24px;
+  
 }
 
 .button a{
     cursor: pointer;
     transition: color 0.3s ease-in-out;
 }
-/* FIN BOTON GO */
+
+.button:hover .button-text{
+    color: rgb(246, 255, 0) !important;
+}
+
+.button-text a {
+    text-decoration: none;
+    color: white;
+}
 
 
+.button-text p a {
+    cursor: pointer;
+}
 
-.front-image,
-.back-image {
+/* Contenedor del botón, oculto por defecto */
+#fightButton {
+    
+    display: none; /* No se muestra hasta que selecciones arma y mapa */
+    
+    display: flex;
+    
+
+  
+   
+
+ 
+}
+
+/* FIN BOTON  */
+
+/* IMAGEN BOTON */
+.front-image, .back-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -253,11 +274,11 @@ div p {
     transform: rotate(5deg);
 }
 
+/* FIN IMAGEN BOTON */
 
-.ball-svg{
-    height: 5%;
-    width:5%;
-}
+
+
+
 
 
 
@@ -292,6 +313,10 @@ footer a {
 /* FIN FOOTER */
 
 
+
+
+
+/* BARRA PELOTAS */
 
 .progress-container {
     width: 80%;
@@ -336,13 +361,24 @@ footer a {
 
 
 
+.ball-svg{
+    height: 5%;
+    width:5%;
+}
+/* FIN BARRA PELOTAS */
 
 
 
+/* SELECCION ELEMENTO */
+.selected {
+    background-color: rgb(255, 0, 234) !important; /* Fuerza el color de fondo */
+    border-color: rgb(255, 255, 255) !important; /* Fuerza el color del borde */
+    transform: scale(1.1);
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
 
 
-
-
+/* SELECCION ARMAS */
 
 .weapons{
     width: 90%;
@@ -396,7 +432,7 @@ footer a {
     transition: transform 0.3s ease; 
 }
 
-
+/* FIN SELECCIONA ARMAS */
 
 #divider{
     padding-top: 2rem;
@@ -409,7 +445,7 @@ footer a {
 
 
 
-
+/* SELECCION MAPAS */
 .maps{
     width: 90%;
     margin: 0 auto;
@@ -463,141 +499,21 @@ footer a {
     transition: transform 0.3s ease; 
 }
 
+/* FIN SELECCION MAPAS */
+
+
 
 /* -------------------- */
 
-.selected {
-    background-color: rgb(255, 0, 234) !important; /* Fuerza el color de fondo */
-    border-color: rgb(255, 255, 255) !important; /* Fuerza el color del borde */
-    transform: scale(1.1);
-    transition: background-color 0.5s ease, transform 0.3s ease;
-}
-
-/* Contenedor del botón, oculto por defecto */
-#fightButtonContainer {
-    display: none; /* Ocultar hasta que haya selección */
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    margin-top: 2rem; /* Espacio entre la selección de mapas y el botón */
-    
-    padding-bottom: 25rem;
-}
-
-/* Botón de combate, mismo diseño que el de la página principal */
-/* .button {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    background-color: transparent;
-} */
-
-.button-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    font-size: 200px;
-    font-family: Splatoon2;
-    color: white;
-    font-weight: bold;
-    pointer-events: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.button-text a {
-    text-decoration: none;
-    color: white;
-}
-
-.front-image,
-.back-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-    background-color: transparent !important;
-}
-
-/* Imagen de atrás */
-.back-image {
-    z-index: 1;
-    transform-origin: center;
-}
-
-/* Imagen de delante */
-.front-image {
-    z-index: 2;
-}
 
 
 
 
-/* Efecto de hover */
-.button:hover .front-image {
-    transform: rotate(-5deg);
-}
-
-.button:hover .back-image {
-    transform: rotate(5deg);
-}
-
-/* Contenedor del botón - Oculto por defecto */
-#fightButtonContainer {
-    display: none; /* No se muestra hasta que selecciones arma y mapa */
-    width: 100%;
-    display: flex;
-    justify-content: center; /* Centra el botón */
-    margin-top: 2rem; /* Espacio debajo de los mapas */
-}
-
-/* Diseño del botón */
-#fightButton {
-    position: relative;
-    width: 400px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 
 
-/* Estilo del texto dentro del botón */
-.button-text {
-    position: absolute;
-    text-align: center;
-    font-size: 24px;
-    font-family: Splatoon2;
-    color: white;
-    font-weight: bold;
-    pointer-events: none; /* No bloquea clics en el enlace */
-}
 
-/* Imágenes del botón */
-.front-image,
-.back-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease-in-out;
-}
 
-/* Rotación de las imágenes al pasar el mouse */
-#fightButton:hover .front-image {
-    transform: rotate(-5deg);
-}
-
-#fightButton:hover .back-image {
-    transform: rotate(5deg);
-}
 
 
 
