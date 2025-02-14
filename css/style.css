@@ -465,6 +465,9 @@ footer a {
     z-index: 2;
 }
 
+
+
+
 /* Efecto de hover */
 .button:hover .front-image {
     transform: rotate(-5deg);
@@ -494,6 +497,8 @@ footer a {
     text-decoration: none;
     cursor: pointer;
 }
+
+
 
 /* Estilo del texto dentro del botón */
 .button-text {
