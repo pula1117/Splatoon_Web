@@ -481,7 +481,7 @@ footer a {
     justify-content: center; /* Centra el botón horizontalmente */
     margin-top: 2rem; /* Espacio entre la selección de mapas y el botón */
     
-    padding-bottom: 5rem;
+    padding-bottom: 25rem;
 }
 
 /* Botón de combate, mismo diseño que el de la página principal */
