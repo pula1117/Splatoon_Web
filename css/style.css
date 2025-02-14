@@ -32,7 +32,7 @@ p{
 }
 
 body {
-    background: url('../media/img/GeneralWeb/Background_image.PNG') no-repeat center center fixed;
+    background: url('../media/img/GeneralWeb/Background_image.png') no-repeat center center fixed;
     background-size: cover;
     background-color: grey; /* Color de respaldo si la imagen no carga */
     display: flex;
@@ -96,7 +96,7 @@ h2 {
     justify-content: center;
     color: rgb(246, 255, 0);
     font-family: Splatoon2;
-    font-size: 40px;
+    font-size: 3.5em;
 }
 
 h3{
@@ -132,11 +132,13 @@ h3{
 
 /* FIN TITULO */
 
+
 #game-text{
     margin-left: 20%;
     margin-right: 20%;
     padding-top: 2rem;;
     font-family: Splatoon2;
+    font-size:1.5em;
 }
 
 #game-text p {
@@ -153,6 +155,8 @@ div p {
     justify-content: center;
     
 }
+
+
 
 /* PAG 404 */
 
@@ -179,6 +183,10 @@ div p {
     width: 100%;  /* Ajusta el ancho de la imagen al 100% del contenedor */
     height: auto; /
 }
+
+/* FIN PAG 404 */
+
+
 
 
 /* BOTON */
@@ -322,7 +330,7 @@ footer a {
     background-color: #ddd;
     border-radius: 20px;
     overflow: hidden;
-    height: 20px;
+    height: 40px;
     margin: 20px auto;
 }
 
@@ -364,6 +372,7 @@ footer a {
     height: 5%;
     width:5%;
 }
+
 /* FIN BARRA PELOTAS */
 
 

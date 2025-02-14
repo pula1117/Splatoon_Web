@@ -1,36 +1,3 @@
-console.log("script.js cargado correctamente");
-
-document.addEventListener("DOMContentLoaded", () => {
-    const weaponCards = document.querySelectorAll(".weapons .card");
-    const mapCards = document.querySelectorAll(".maps .card");
-    const body = document.querySelector("body");
-
-    function handleSelection(cards, event) {
-        event.stopPropagation();
-
-        cards.forEach(c => c.classList.remove("selected"));
-
-        event.currentTarget.classList.add("selected");
-
-        const selectedName = event.currentTarget.querySelector(".name").textContent;
-        console.log(`Seleccionado: ${selectedName}`);
-    }
-
-    weaponCards.forEach(card => {
-        card.addEventListener("click", (event) => handleSelection(weaponCards, event));
-    });
-
-    mapCards.forEach(card => {
-        card.addEventListener("click", (event) => handleSelection(mapCards, event));
-    });
-
-    body.addEventListener("click", () => {
-        weaponCards.forEach(c => c.classList.remove("selected"));
-        mapCards.forEach(c => c.classList.remove("selected"));
-        console.log("Ningún arma ni mapa seleccionado");
-    });
-});
-
 
 $(document).ready(function () {
     const weaponCards = $(".weapons .card");
