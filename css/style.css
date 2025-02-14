@@ -15,6 +15,7 @@ html {
     /* cursor: url(../media/img/Splatoon_Squid_Cursor.png)pointer; */
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -98,10 +99,11 @@ div p {
 
 /* Estilos para el contenedor del botón */
 .button-container {
-    position: relative;
+    width: 100%;              
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;  
+    align-items: center;      
+    margin-top: 2rem;        
 }
 
 .button-text {
@@ -319,4 +321,123 @@ footer a {
     border-color: rgb(255, 255, 255) !important; /* Fuerza el color del borde */
     transform: scale(1.1);
     transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+/* Contenedor del botón, oculto por defecto */
+#fightButtonContainer {
+    display: none; /* Ocultar hasta que haya selección */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    margin-top: 2rem; /* Espacio entre la selección de mapas y el botón */
+}
+
+/* Botón de combate, mismo diseño que el de la página principal */
+.button {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: transparent;
+}
+
+.button-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 24px;
+    font-family: Splatoon2;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.button-text a {
+    text-decoration: none;
+    color: white;
+}
+
+.front-image,
+.back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: transparent !important;
+}
+
+/* Imagen de atrás */
+.back-image {
+    z-index: 1;
+    transform-origin: center;
+}
+
+/* Imagen de delante */
+.front-image {
+    z-index: 2;
+}
+
+/* Efecto de hover */
+.button:hover .front-image {
+    transform: rotate(-5deg);
+}
+
+.button:hover .back-image {
+    transform: rotate(5deg);
+}
+
+/* Contenedor del botón - Oculto por defecto */
+#fightButtonContainer {
+    display: none; /* No se muestra hasta que selecciones arma y mapa */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: 2rem; /* Espacio debajo de los mapas */
+}
+
+/* Diseño del botón */
+#fightButton {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo del texto dentro del botón */
+.button-text {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    font-family: Splatoon2;
+    color: white;
+    font-weight: bold;
+    pointer-events: none; /* No bloquea clics en el enlace */
+}
+
+/* Imágenes del botón */
+.front-image,
+.back-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotación de las imágenes al pasar el mouse */
+#fightButton:hover .front-image {
+    transform: rotate(-5deg);
+}
+
+#fightButton:hover .back-image {
+    transform: rotate(5deg);
 }

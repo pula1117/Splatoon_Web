@@ -74,5 +74,62 @@ $(document).ready(function () {
         mapCards.removeClass("selected");
         console.log("Ningún arma ni mapa seleccionado");
     });
+    const goButton = document.getElementById("goButton");
+    if (goButton) {
+        goButton.addEventListener("click", () => {
+            window.location.href = "selection.html";
+        });
+    }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("script.js cargado correctamente");
+
+    const weaponCards = document.querySelectorAll(".weapon-card");
+    const mapCards = document.querySelectorAll(".map-card");
+    const fightButtonContainer = document.getElementById("fightButtonContainer");
+    const fightButton = document.getElementById("fightButton");
+
+    if (!weaponCards.length || !mapCards.length || !fightButtonContainer || !fightButton) {
+        console.error("ERROR: No se encontraron elementos en el DOM.");
+        return;
+    }
+
+    // Ocultar el botón y deshabilitar el enlace al cargar la página
+    fightButtonContainer.style.display = "none";
+    fightButton.classList.add("disabled");
+    fightButton.style.pointerEvents = "none"; // Evita que se pueda hacer clic
+
+    function checkSelection() {
+        const selectedWeapon = document.querySelector(".weapon-card.selected");
+        const selectedMap = document.querySelector(".map-card.selected");
+
+        if (selectedWeapon && selectedMap) {
+            fightButtonContainer.style.display = "flex"; // Mostrar el botón
+            fightButton.classList.remove("disabled");
+            fightButton.style.pointerEvents = "auto"; // Habilitar clic
+        } else {
+            fightButtonContainer.style.display = "none"; // Ocultar el botón
+            fightButton.classList.add("disabled");
+            fightButton.style.pointerEvents = "none"; // Deshabilitar clic
+        }
+    }
+
+    // Evento para seleccionar armas
+    weaponCards.forEach(card => {
+        card.addEventListener("click", function () {
+            weaponCards.forEach(c => c.classList.remove("selected")); // Deseleccionar otras
+            this.classList.add("selected"); // Seleccionar esta
+            checkSelection();
+        });
+    });
+
+    // Evento para seleccionar mapas
+    mapCards.forEach(card => {
+        card.addEventListener("click", function () {
+            mapCards.forEach(c => c.classList.remove("selected")); // Deseleccionar otras
+            this.classList.add("selected"); // Seleccionar esta
+            checkSelection();
+        });
+    });
+});
